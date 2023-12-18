@@ -7,13 +7,23 @@ function BasketProvider({ children }) {
   const [basket, setBasket] = useLocalStorage("basket", []);
 
   function addToBasket(item) {
-    console.log(item.id);
-    const index = basket.findIndex((x) => x.id === item.id);
-    console.log(index);
-    if (index === -1) {
-      setBasket([...basket, { ...item, count: 1 }]);
-      return;
-    }
+    const temp = []
+    console.log(item);
+    [...item].map(it=>{
+      console.log(it);
+      const index = basket.findIndex((x) => x.id === it.id);
+      if (index === -1) {
+        temp.push({ ...it, count: 1 })
+        // setBasket([...basket, { ...it, count: 1 }]);
+      }
+    })
+    setBasket([...basket,...temp])
+    // const index = basket.findIndex((x) => x.id === item.id);
+    // console.log(index);
+    // if (index === -1) {
+    //   setBasket([...basket, { ...item, count: 1 }]);
+    //   return;
+    // }
   }
 
   function removeFromBasket(item) {
@@ -41,7 +51,7 @@ function BasketProvider({ children }) {
       return;
     }
     basket[index].count = +c;
-    console.log(index, item, +c, basket[index].count);
+    // console.log(index, item, +c, basket[index].count);
     setBasket([...basket]);
   }
 

@@ -15,7 +15,7 @@ function BestSelling() {
         </div>
         <div className="bestselling__cards">
           {apiData.slice(8,24).map((x) => (
-              <SalesCard x={x} isHome={true} />
+              <SalesCard key={x.id} x={x} isHome={true} />
             ))}
         </div>
       </div>

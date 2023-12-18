@@ -12,7 +12,7 @@ function SalesCard({ x, isHome }) {
     <div className="card">
       <div className="card__image">
         <img src={x.thumbnail} alt="Image 1" />
-        <button onClick={() => addToBasket(x)} className="card__addcart">
+        <button onClick={() => addToBasket([x])} className="card__addcart">
           Add To Cart
         </button>
       </div>

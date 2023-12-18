@@ -10,7 +10,8 @@ function WishlistSection() {
 
 
   function handleMoveToBasket() {
-    wishlist.map(x=>addToBasket(x))
+    console.log(...wishlist);
+    addToBasket(wishlist)
   }
   return (
     <div className="wishlist">
