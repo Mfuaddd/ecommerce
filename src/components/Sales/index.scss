@@ -1,0 +1,42 @@
+
+.sales {
+  margin: 140px 0;
+  &__header{
+    margin: 35px 0;
+  }
+  &__time{
+    flex-grow: 1;
+  }
+
+  &__control{
+    &__left{
+        width: 45px;
+        height: 45px;
+    }
+  }
+}
+
+.time {
+    margin-left: 80px;
+  &__number{
+    color: var(--black);
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 1.28px;
+  }
+  &__name{
+    color: var(--black);
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  &__colon{
+    color: #e07575;
+    font-size: 32px;
+    margin: 0 15px;
+  }
+}

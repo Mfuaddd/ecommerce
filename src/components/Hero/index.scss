@@ -1,0 +1,25 @@
+.hero{
+    margin-bottom: 70px;
+    &__categories{
+        width: 20%;
+        padding-top: 25px;
+        padding-right: 15px;
+        border-right:1px solid #b4b4b4 ;
+        > li{
+            margin-top: 5px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+    }
+
+    &__carousel{
+        margin-top: 40px;
+        margin-left: 40px;
+        width: 80%;
+        background-color: black;
+        background-image: url("../../assets/imgs/hero_endframe.png");
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+    }
+}
